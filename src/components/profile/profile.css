@@ -1,0 +1,230 @@
+#profile{
+    background-color: var(--foreground);
+    box-shadow: var(--shadow);
+    padding: 32px 24px;
+    border-radius: 15px;
+    margin: 16px 0;
+    width: calc(90% - 48px);
+    max-width: calc(350px - 48px);
+}
+
+#avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 19px;
+}
+
+#main-profile-section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+}
+
+h2, h3, h4{
+    margin: 0;
+    padding: 0;
+}
+
+#main-profile-section-text{
+    /* height: 70px; */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#main-profile-section-text h2{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-three);
+}
+
+#main-profile-section-text h3{
+    font-weight: 400;
+    font-size: 13px;
+    color: #0079FF;
+}
+
+#main-profile-section-text h4{
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--text-joined);
+    margin-top: 6px;
+}
+
+
+#bio{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;    
+    color: var(--text-two);
+}
+
+#stats-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background);
+    border-radius: 10px;
+    margin: 24px 0;
+}
+
+.stat{
+    width: 85px;
+    padding: 18px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat > h4 {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--text-two);
+}
+
+.stat > p {
+    margin: 0;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--text-three);
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    margin: 17px 0;
+}
+
+.link-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: var(--text-two);
+    
+}
+
+.link-image-container {
+    width: 33px;
+    display: flex;
+    align-items: center;
+}
+
+.link-image-container > img {
+    filter: var(--filter);
+}
+
+#avatar-desktop{
+    display: none;
+}
+
+@media screen and (min-width: 550px){
+    #profile{
+        padding: 40px;
+        padding-bottom: 33px;
+        margin: 24px 0;
+        width: calc(90% - 80px);
+        max-width: calc(573px - 80px)
+    }
+    #avatar {
+        width: 117px;
+        height: 117px;
+    }
+
+    #main-profile-section{
+        margin-bottom: 9px;
+    }
+
+    #main-profile-section-text h2 {font-size: 26px;}
+    #main-profile-section-text h3 {font-size: 16px;}
+    #main-profile-section-text h4 {font-size: 15px;}
+    #bio {font-size: 15px;}
+
+    #stats-section{
+        padding-left: 17px;
+        padding-right: 81px;
+        margin-top: 32px;
+        margin-bottom: 23px;
+    }
+
+    .stat{
+        text-align: left;
+        align-items: start;
+    }
+    .stat > h4 {font-size: 13px;}
+    .stat > p {font-size: 22px;}
+
+    #links-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 23px;
+    }
+
+    .link-couples {
+        width: 240px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    #profile{
+        padding: 48px;
+        max-width: 634px;
+        display: flex;
+    }
+    #avatar-desktop {
+        width: 117px;
+        height: 117px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 37px;
+    }
+    #avatar {display: none; padding: 0}
+    #profile-content {
+        flex: 1;
+    }
+    #main-profile-section-text {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.animated{
+	background-image: linear-gradient(90deg, #ff0000, #d400ff, #3700ff, #03866a, #3700ff, #d400ff, #ff0000);
+    background-size: 800%;
+	background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
